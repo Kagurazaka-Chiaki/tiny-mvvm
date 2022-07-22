@@ -1,24 +1,27 @@
-import { Manager } from "./manager";
+/**
+ * 观察者类
+ *
+ * 原来用的 Object.defineProperty
+ *
+ * 后来发现 Proxy 说更好的实现
+ *
+**/
 
 export class Observer {
-
-    data_: object;
-
-    constructor(data: object) {
-        if (data && typeof data === "object") {
-            this.define_reactive(data);
-        }
-        this.data_ = data;
-    };
-
-    define_reactive(data: object): void {
-
-        Object.keys(data).forEach(key => {
-            const manager = new Manager();
-            let val = data
+    observe(obj: any, key: any) {
+        let prev = obj[key]
+        Object.defineProperty(obj, key, {
+            enumerable: true,
+            configurable: true,
+            get: () => {
+                return prev
+            },
+            set: (curr: any) => {
+                if (curr !== prev) {
+                    console.log(`observe change ${prev} to ${curr}`)
+                    prev = curr
+                }
+            }
         })
-
     };
-
-
 }

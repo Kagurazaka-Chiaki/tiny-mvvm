@@ -1,7 +1,5 @@
 
-coverage/
-
 dist/
-
+coverage/
 node_modules/
-
+.parcel-cache/

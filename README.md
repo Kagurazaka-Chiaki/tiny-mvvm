@@ -3,8 +3,6 @@
 
 
 
-
-
 ### 预览效果
 
 ```
@@ -17,3 +15,7 @@ yarn start
 ```
 yarn test
 ```
+
+### 测试报告
+
+![](img/test_report.png)
