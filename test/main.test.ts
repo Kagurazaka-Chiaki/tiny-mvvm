@@ -1,5 +1,5 @@
 
-import { MVVM } from "../src/mvvm";
+import { MVVM } from "../src/services/mvvm/mvvm";
 
 
 test('simpe test', () => {

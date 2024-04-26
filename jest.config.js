@@ -1,11 +1,15 @@
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
-module.exports = {
+
+
+// JestConfigWithTsJest
+
+
+export default {
 
   collectCoverage: true,
 
   preset: 'ts-jest',
 
-  testEnvironment: "jsdom",
+  // testEnvironment: "node",
 
-  // testEnvironment: "jsdom"
+  testEnvironment: "jsdom"
 };

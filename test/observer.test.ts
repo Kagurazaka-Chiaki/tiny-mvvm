@@ -1,5 +1,5 @@
 
-import { Observer } from "../src/observer";
+import { Observer } from '../src/services/mvvm/observer';
 
 test('set this to that', () => {
 
